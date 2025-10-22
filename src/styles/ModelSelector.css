@@ -1,0 +1,16 @@
+.model-select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;  /* ✅ cinza claro */
+  color: #333;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s ease-in-out, background 0.2s;
+}
+
+.model-select:focus {
+  border-color: #8b5cf6;
+  background-color: #fff;     /* fica branca ao selecionar */
+}

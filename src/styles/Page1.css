@@ -1,0 +1,122 @@
+.library-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px 70px 16px; /* espaço pro BottomNav */
+  background-color: var(--bg-color, #f3f3f3);
+  overflow-y: auto;
+}
+
+/* Barra de pesquisa e tema */
+.library-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.search-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.search-icon {
+  font-size: 16px;
+  color: #888;
+  margin-right: 8px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #444;
+  background: transparent;
+}
+
+/* Botão de alternância de tema */
+.theme-toggle {
+  margin-left: 10px;
+  background-color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards */
+.library-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.library-card {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 12px 14px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.item-title {
+  font-weight: 600;
+  color: #333;
+  font-size: 15px;
+}
+
+.item-date {
+  font-size: 13px;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* Botão Ver Chat */
+.chat-btn {
+  margin: 20px auto 0 auto;
+  background-color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 30px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background 0.2s;
+  color: #333; /* 🔹 deixa o texto visível */
+
+}
+
+.chat-btn:hover {
+  background-color: #f1f1f1;
+}
+
+/* Modo escuro */
+.dark-mode {
+  --bg-color: #222;
+}
+
+.dark-mode .library-body {
+  background-color: #222;
+}
+
+.dark-mode .library-card,
+.dark-mode .chat-btn,
+.dark-mode .search-bar,
+.dark-mode .theme-toggle {
+  background-color: #333;
+  color: #f1f1f1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.chat-body,
+.library-body {
+  flex: 1;
+  overflow-y: auto;
+}
