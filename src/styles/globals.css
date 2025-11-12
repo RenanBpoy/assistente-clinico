@@ -7,46 +7,57 @@
 
 /* Evita mudança de largura entre telas com/sem scroll */
 html {
-  overflow-y: scroll; /* força a barra SEMPRE existir */
+  overflow-y: scroll;
 }
 
 body {
   height: 100vh;
   width: 100%;
-  overflow: hidden; /* impede scroll externo */
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Inter", sans-serif;
-  background-color: #ececec;
+  /* Fundo do "desktop" mais escuro para destacar o app */
+  background-color: #d1d1d1;
 }
 
 /* Contêiner fixo tipo "celular" */
 .app-container {
-  width: 360px;         /* 🔒 largura fixa (iPhone 12/13) */
-  max-width: 390px;     /* impede redimensionamento */
-  height: 100vh;
+  /* --- CORREÇÃO DE TAMANHO --- */
+  width: 393px;         
+  height: 852px;
+  /* --- FIM DA CORREÇÃO --- */
+  
+  max-width: 393px;     /* Garante que não ultrapasse */
+  max-height: 852px;    /* Garante que não ultrapasse */
+  
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: #e0e0e0;
   border-radius: 24px;
-  box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 12px 12px 24px #bebebe, -12px -12px 24px #f8f7f7;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
+  
+  /* Adiciona isso para o caso da tela ser menor que 852px */
+  margin: auto; 
 }
-
 
 /* Modo mobile */
 @media (max-width: 600px) {
   body {
     align-items: stretch;
     justify-content: stretch;
-    background-color: #fff;
+    background-color: #e0e0e0; 
   }
 
   .app-container {
     border-radius: 0;
     max-width: none;
+    max-height: none; /* Remove a altura máxima no mobile */
     box-shadow: none;
+    width: 100%;    /* Ocupa a tela inteira */
+    height: 100vh; /* Ocupa a tela inteira */
   }
 }

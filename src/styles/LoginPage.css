@@ -1,0 +1,108 @@
+.login-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  padding: 20px;
+  background-color: #e0e0e0;
+  overflow-y: auto;
+  gap: 24px;
+}
+
+/* 1. Logo Placeholder */
+.login-logo-placeholder {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: #888;
+  margin-top: 24px;
+}
+
+/* 2. Abas (Tabs) */
+.login-tabs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+  /* CORREÇÃO: Remove a linha cinza completa */
+  /* border-bottom: 2px solid #bebebe; */
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #888;
+  cursor: pointer;
+  position: relative;
+  
+  /* Ajuste este valor se a linha ainda estiver curta/longa */
+  padding: 10px 50px; 
+}
+
+.tab-btn.active {
+  color: #555; 
+  border-bottom: 3px solid #63c9a8; 
+}
+
+/* 3. Formulário */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.login-input {
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  font-size: 14px;
+  color: #333;
+  
+  /* Efeito "Prensado" (Côncavo/Inset) */
+  background: #e0e0e0;
+  box-shadow: inset 4px 4px 8px #bebebe, 
+              inset -4px -4px 8px #ffffff;
+  transition: box-shadow 0.1s ease;
+}
+
+.login-input::placeholder {
+  color: #777;
+}
+
+.login-input:focus {
+  outline: none;
+  box-shadow: inset 2px 2px 4px #bebebe, 
+              inset -2px -2px 4px #ffffff;
+}
+
+/* 4. Botão Principal */
+.login-btn {
+  width: auto; 
+  background: #e0e0e0;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px; 
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 4px 4px 8px #bebebe, 
+              -4px -4px 8px #ffffff;
+  cursor: pointer;
+  color: #333;
+  transition: box-shadow 0.1s ease;
+  margin-top: 10px;
+}
+
+.login-btn:active {
+  box-shadow: inset 2px 2px 4px #bebebe, 
+              inset -2px -2px 4px #ffffff;
+}

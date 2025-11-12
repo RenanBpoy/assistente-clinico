@@ -1,35 +1,37 @@
 .chatbox {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   height: 100%;
   overflow-y: auto;
-  padding-bottom: 8px;
+  padding: 6px;
 }
 
 .empty-chat {
-  color: #aaa;
+  color: #999;
   text-align: center;
   margin-top: 40px;
   font-size: 14px;
 }
 
 .chat-msg {
-  padding: 8px 12px;
-  border-radius: 12px;
+  padding: 10px 14px;
+  border-radius: 16px;
   max-width: 80%;
   font-size: 14px;
   word-wrap: break-word;
+  /* Efeito "Extrudado" (Convexo/Outset) */
+  background: #e0e0e0;
+  box-shadow: 3px 3px 6px #bebebe, 
+              -3px -3px 6px #ffffff;
 }
 
 .user-msg {
-  background-color: #f3e8ff;
-  color: #4a148c;
+  color: #4a148c; 
   align-self: flex-end;
 }
 
 .bot-msg {
-  background-color: #e0e7ff;
-  color: #1e3a8a;
+  color: #1e3a8a; 
   align-self: flex-start;
 }

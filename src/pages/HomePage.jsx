@@ -4,6 +4,7 @@ import { BottomNav } from "../components/containers/BottomNav";
 import { ChatBox } from "../components/ChatBox";
 import { ModelSelector } from "../components/ModelSelector";
 import "../styles/HomePage.css";
+import { MdSend } from "react-icons/md";
 
 const HomePage = () => {
   const [messages, setMessages] = useState([]);
@@ -46,8 +47,7 @@ const handleSend = async () => {
 
   return (
     <div className="app-container">
-      {/* Cabeçalho */}
-      <Header section="ChatBot Gemini 2" />
+      <Header section="ChatBot Gemini 2" showBackButton={true} />
 
       {/* Corpo do chat */}
       <main className="chat-body">
@@ -65,7 +65,10 @@ const handleSend = async () => {
             onKeyDown={(e) => e.key === "Enter" && handleSend()}
             className="chat-input"
           />
-          <button onClick={handleSend} className="send-btn">➤</button>
+          {/* Substituímos o emoji pelo componente de ícone */}
+          <button onClick={handleSend} className="send-btn">
+            <MdSend size={20} />
+          </button>
         </div>
         <ModelSelector model={model} onChange={setModel} />
       </footer>
