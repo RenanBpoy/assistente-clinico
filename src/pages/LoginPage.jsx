@@ -11,7 +11,8 @@ const LoginPage = () => {
   const [senha, setSenha] = useState("");
   const [confirmar, setConfirmar] = useState("");
 
-  const backendUrl = "http://127.0.0.1:8000";
+  const backendUrl = "https://assistente-clinico-backend.onrender.com";
+
 
   const handleLogin = async () => {
     if (!email || !senha) {
